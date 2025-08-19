@@ -97,6 +97,17 @@ class BinaryTree {
       console.log(node.val);
     }
   }
+  levelOrderTraversal() {
+    let q = [];
+    let curr = this.root;
+    q.push(curr);
+    while (q.length) {
+      let temp = q.shift();
+      console.log(temp.val);
+      if (temp.left) q.push(temp.left);
+      if (temp.right) q.push(temp.right);
+    }
+  }
 }
 
 let tree = new BinaryTree();
@@ -107,8 +118,9 @@ tree.insert(new Node(7));
 tree.insert(new Node(2));
 // tree.preOrderRecursive();
 // tree.inOrderRecursive();
-tree.postOrderRecursive();
-console.log("Iterative:");
-tree.postOrderIterative();
+// tree.postOrderRecursive();
+// console.log("Iterative:");
+// tree.postOrderIterative();
 // tree.inOrderIterative();
 // tree.preOrderIterative();
+tree.levelOrderTraversal();
