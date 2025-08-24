@@ -111,15 +111,17 @@ class MaxHeap extends Heap {
   }
 }
 
-var mh1 = new MaxHeap();
-mh1.add(1);
-mh1.add(10);
-mh1.add(5);
-mh1.add(100);
-mh1.add(8);
+module.exports = { MinHeap, MaxHeap };
 
-console.log(mh1.remove());
-console.log(mh1.remove());
-console.log(mh1.remove());
-console.log(mh1.remove());
-console.log(mh1.remove());
+// var mh1 = new MaxHeap();
+// mh1.add(1);
+// mh1.add(10);
+// mh1.add(5);
+// mh1.add(100);
+// mh1.add(8);
+
+// console.log(mh1.remove());
+// console.log(mh1.remove());
+// console.log(mh1.remove());
+// console.log(mh1.remove());
+// console.log(mh1.remove());
