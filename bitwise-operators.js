@@ -39,7 +39,44 @@ function bitWiseMultiplication(a, b) {
   return sign < 0 ? bitwiseNegate(result) : result;
 }
 
+function bitWiseDividePositive(a, b) {
+  let c = 0;
+  if (b != 0) {
+    while (a >= b) {
+      a = bitwiseSubtract(a, b);
+      c++;
+    }
+  }
+  return c;
+}
+
+function bitwiseDivide(a, b) {
+  let isNegative = false;
+  let c = 0;
+  if (a < 0) {
+    a = bitwiseNegate(a);
+    isNegative = !isNegative;
+  }
+  if (b < 0) {
+    b = bitwiseNegate(b);
+    isNegative != isNegative;
+  }
+  if (b != 0) {
+    while (a >= b) {
+      a = bitwiseSubtract(a, b);
+      c++;
+    }
+  }
+  if (isNegative) {
+    c = bitwiseNegate(c);
+  }
+  return c;
+}
+
 // console.log(bitwiseAdd(5, 4));
 // console.log(bitwiseNegate(5));
 // console.log(bitwiseSubtract(5, 4));
-console.log(bitWiseMultiplication(-4, 5));
+// console.log(bitWiseMultiplication(-4, 5));
+
+// console.log(bitWiseDividePositive(10, 2));
+console.log(bitwiseDivide(-10, 2));
